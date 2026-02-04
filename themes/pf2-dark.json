@@ -1,0 +1,197 @@
+{
+  "author": "LuCE Research Lab",
+  "colors": {
+    "editor.background": "#292929",
+    "editor.foreground": "#e0e0e0",
+    "editor.lineHighlightBackground": "#6e76811a",
+    "editor.wordHighlightBackground": "#6e768180",
+    "editorBracketHighlight.foreground1": "#eb6f92",
+    "editorBracketHighlight.foreground2": "#0091a6",
+    "editorBracketHighlight.foreground3": "#e2b433",
+    "editorBracketHighlight.foreground4": "#eb6f92",
+    "editorBracketHighlight.foreground5": "#0091a6",
+    "editorBracketHighlight.foreground6": "#e2b433",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#dc626d",
+    "editorBracketPairGuide.activeBackground1": "#eb6f92",
+    "editorBracketPairGuide.activeBackground2": "#6fa1ba",
+    "editorBracketPairGuide.activeBackground3": "#e2b433",
+    "editorBracketPairGuide.activeBackground4": "#eb6f92",
+    "editorBracketPairGuide.activeBackground5": "#0091a6",
+    "editorBracketPairGuide.activeBackground6": "#e2b433",
+    "editorLineNumber.activeForeground": "#479ef5",
+    "editorLineNumber.foreground": "#a9a9a9",
+    "errorForeground": "#dc626d",
+    "foreground": "#fcfcfc",
+    "statusBar.foreground": "#7d8590",
+    "statusBar.background": "#292929"
+  },
+  "inherit": true,
+  "name": "PF2 Dark",
+  "semanticClass": "pf2-dark",
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "*.declaration": {
+      "underline": true
+    },
+    "*.definition": {
+      "underline": true
+    },
+    "annotationMember": "#30b8ef",
+    "builtinConstant": "#4bb766",
+    "class": "#e9835e",
+    "enum": "#e9835e",
+    "enumMember": "#30b8ef",
+    "function": "#ba9080",
+    "interface": "#e9835e",
+    "keyword": {
+      "bold": true,
+      "foreground": "#f5f5f5"
+    },
+    "literal": "#4bb766",
+    "method": "#ba9080",
+    "number": "#4bb766",
+    "parameter": {
+      "foreground": "#008BCB",
+      "italic": true
+    },
+    "parameter.readonly": {
+      "italic": false
+    },
+    "property": {
+      "foreground": "#30b8ef",
+      "italic": true
+    },
+    "property.readonly": {
+      "italic": false
+    },
+    "recordComponent": {
+      "italic": false
+    },
+    "string": "#4bb766",
+    "typeParameter": "#e9835e",
+    "variable": {
+      "foreground": "#30b8ef",
+      "italic": true
+    },
+    "variable.readonly": {
+      "foreground": "#30b8ef",
+      "italic": false
+    }
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": [
+        "comment"
+      ],
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#c7c7c7"
+      }
+    },
+    {
+      "name": "Extra Literals",
+      "scope": [
+        "constant.language",
+        "constant.numeric",
+        "string"
+      ],
+      "settings": {
+        "foreground": "#4bb766"
+      }
+    },
+    {
+      "name": "Extra Types",
+      "scope": [
+        "storage.type",
+        "entity.name.tag.localname.xml",
+        "entity.other.attribute-name.namespace.xml"
+      ],
+      "settings": {
+        "foreground": "#e9835e"
+      }
+    },
+    {
+      "name": "Extra Procedures",
+      "scope": [
+        "support.function.builtin",
+        "entity.name.command.shell"
+      ],
+      "settings": {
+        "foreground": "#ba9080"
+      }
+    },
+    {
+      "name": "Extra Keywords",
+      "scope": [
+        "keyword.control",
+        "keyword.other",
+        "storage.modifier.java",
+        "storage.modifier.implements",
+        "storage.modifier.extends",
+        "meta.definition.variable.groovy",
+        "punctuation.definition.subshell.single.shell",
+        "entity.name.tag.xml"
+      ],
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#f5f5f5"
+      }
+    },
+    {
+      "name": "Extra Names",
+      "scope": [
+        "entity.name.function.shell",
+        "entity.other.attribute-name.localname.xml",
+        "entity.other.attribute-name.xml",
+        "support.type.property-name.json",
+        "variable.other.assignment.shell",
+        "variable.other.normal.shell",
+        "variable.parameter.positional.shell"
+      ],
+      "settings": {
+        "foreground": "#30b8ef"
+      }
+    },
+    {
+      "name": "Plain",
+      "scope": [
+        "meta.scope.subshell"
+      ],
+      "settings": {
+        "foreground": "#e0e0e0"
+      }
+    },
+    {
+      "name": "Bold",
+      "scope": [
+        "markup.bold",
+        "punctuation.definition.list"
+      ],
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Italic",
+      "scope": [
+        "markup.italic"
+      ],
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Underline",
+      "scope": [
+        "markup.heading",
+        "markup.underline",
+        "meta.link.inline",
+        "variable.other.assignment.shell"
+      ],
+      "settings": {
+        "fontStyle": "underline"
+      }
+    }
+  ]
+}

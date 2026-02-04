@@ -122,7 +122,19 @@
           "icon": "$(coffee)"
         }
       ]
-    }
+    },
+    "themes": [
+      {
+        "label": "PF2 Light",
+        "uiTheme": "vs",
+        "path": "./themes/pf2-light.json"
+      },
+      {
+        "label": "PF2 Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pf2-dark.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
