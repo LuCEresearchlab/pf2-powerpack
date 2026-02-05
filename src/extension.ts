@@ -1,28 +1,17 @@
-import * as vscode from 'vscode';
-import {
-  gradleAssembleAndOpenJShellTerminal,
-  openJShellTerminal,
-} from './commands';
-import { populateInfoChannel } from './info';
-import { createTerminalProfile } from './shell';
+import * as vscode from "vscode";
+import { gradleAssembleAndOpenJShellTerminal } from "./commands";
+import { checkEnvironment } from "./env";
+import { populateInfoChannel } from "./info";
 
 export function activate(context: vscode.ExtensionContext) {
   // Information channel
-  const chan = vscode.window.createOutputChannel("JShell");
+  const chan = vscode.window.createOutputChannel("PF2 PowerPack");
   populateInfoChannel(chan);
 
-  // Terminal Profile
-  vscode.window.registerTerminalProfileProvider('vs-jshell:terminal-profile', {
-    provideTerminalProfile: _ => createTerminalProfile()
-  });
+  checkEnvironment();
 
-  // Commands
   vscode.commands.registerCommand(
-    'vs-jshell:cmd-open-term',
-    openJShellTerminal,
-  );
-  vscode.commands.registerCommand(
-    'vs-jshell:cmd-gradle-assemble-open-term',
+    "pf2-powerpack:cmd-gradle-assemble-open-term",
     gradleAssembleAndOpenJShellTerminal,
   );
 }

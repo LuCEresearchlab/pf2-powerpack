@@ -13,8 +13,8 @@
 ## Install
 
 - **Marketplace**
-  - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=luceresearchlab.vs-jshell)
-  - [OpenVSX Registry](https://open-vsx.org/extension/luceresearchlab/vs-jshell)
+  - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=luceresearchlab.pf2-powerpack)
+  - [OpenVSX Registry](https://open-vsx.org/extension/luceresearchlab/pf2-powerpack)
 - **Manually** (from GitHub Actions)
   1. Download and extract the `vsix` file from the GitHub actions [artifacts](https://github.com/LuCEresearchlab/vscode-jshell/actions/workflows/build.yml)
   2. Execute `code --install-extension path/to/vscode-jshell-$VERSION.vsix`

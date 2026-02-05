@@ -1,5 +1,5 @@
-import fs from 'fs';
-import * as vscode from 'vscode';
+import fs from "fs";
+import * as vscode from "vscode";
 
 export function getMainWorkspaceUri(): vscode.Uri | undefined {
   const workspaceFolders = vscode.workspace.workspaceFolders;

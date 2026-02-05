@@ -1,11 +1,11 @@
 {
-  "name": "vs-jshell",
-  "displayName": "vs-jshell",
-  "description": "JShell integration for VSCode",
+  "name": "pf2-powerpack",
+  "displayName": "PF2 PowerPack",
+  "description": "Extension for the PF2 course at USI Lugano",
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LuceResearchLab/vscode-jshell.git"
+    "url": "https://github.com/LuceResearchLab/pf2-extension.git"
   },
   "publisher": "luceresearchlab",
   "maintainers": [
@@ -14,7 +14,7 @@
       "email": "bevilj@usi.ch"
     }
   ],
-  "version": "1.2.0",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -22,104 +22,29 @@
     "Other"
   ],
   "keywords": [
-    "Java",
-    "JShell"
+    "Java"
   ],
   "bugs": {
-    "url": "https://github.com/LuceResearchLab/vscode-jshell/issues"
+    "url": "https://github.com/LuceResearchLab/pf2-powerpack/issues"
   },
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vs-jshell:cmd-open-term",
-        "title": "Open new JShell session",
-        "icon": "$(coffee)"
-      },
-      {
-        "command": "vs-jshell:cmd-gradle-assemble-open-term",
+        "command": "pf2-powerpack:cmd-gradle-assemble-open-term",
         "title": "Assemble & Open new JShell session",
         "icon": "$(coffee)"
-      }
-    ],
-    "configuration": [
-      {
-        "id": "vscode-jshell-config",
-        "title": "JShell",
-        "properties": {
-          "jshell.shellPath": {
-            "order": 0,
-            "description": "Path to the `jshell` executable",
-            "type": "string",
-            "default": "jshell"
-          },
-          "jshell.feedback": {
-            "order": 1,
-            "description": "Specify the initial feedback mode",
-            "type": "string",
-            "default": "normal",
-            "enum": [
-              "silent",
-              "concise",
-              "normal",
-              "verbose"
-            ]
-          },
-          "jshell.nativeAccess": {
-            "order": 2,
-            "description": "Allow code to run restricted native methods",
-            "type": "boolean"
-          },
-          "jshell.preview": {
-            "order": 2,
-            "description": "Allow code to depend on preview features of this release",
-            "type": "boolean"
-          },
-          "jshell.compilerFlags": {
-            "order": 3,
-            "description": "Pass flags to the compiler (separate by space)",
-            "type": "string",
-            "default": ""
-          },
-          "jshell.runtimeFlags": {
-            "order": 3,
-            "description": "Pass flags directly to the runtime system (separate by space)",
-            "type": "string",
-            "default": ""
-          },
-          "jshell.remoteRuntimeFlags": {
-            "order": 3,
-            "description": "Pass flags directly to the remote runtime system (separate by space)",
-            "type": "string",
-            "default": "-ea"
-          }
-        }
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "vs-jshell:cmd-open-term",
-        "key": "Ctrl+Alt+J",
-        "mac": "Cmd+Alt+J",
-        "when": "terminalProcessSupported && editorTextFocus && editorLangId == java"
       }
     ],
     "menus": {
       "editor/title/run": [
         {
           "when": "editorLangId == java",
-          "command": "vs-jshell:cmd-gradle-assemble-open-term",
+          "command": "pf2-powerpack:cmd-gradle-assemble-open-term",
           "group": "navigation"
-        }
-      ]
-    },
-    "terminal": {
-      "profiles": [
-        {
-          "id": "vs-jshell:terminal-profile",
-          "title": "JShell",
-          "icon": "$(coffee)"
         }
       ]
     },

@@ -1,27 +1,18 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-import { getShellPath } from './config';
-import { getShellArgs } from './shell';
 import {
   buildGradleProject,
   getGradleProjectRoot,
-} from './gradle';
-
-export function openJShellTerminal() {
-  vscode.window.createTerminal(
-    'JShell',
-    getShellPath(),
-    getShellArgs(),
-  ).show(true);
-}
+} from "./gradle";
+import { openTerminal } from "./jshell";
 
 export function gradleAssembleAndOpenJShellTerminal() {
   const gradleProject = getGradleProjectRoot();
   if (gradleProject) {
     buildGradleProject(gradleProject)
-      .then(res => {
+      .then((res) => {
         if (res.success) {
-          openJShellTerminal();
+          openTerminal();
         } else {
           throw res.reason;
         }
@@ -30,6 +21,6 @@ export function gradleAssembleAndOpenJShellTerminal() {
         `Failed to assemble Gradle project: ${e}`
       ));
   } else {
-    vscode.window.showErrorMessage('Couldn\'t locate the Gradle project root');
+    vscode.window.showErrorMessage("Couldn\"t locate the Gradle project root");
   }
 }
