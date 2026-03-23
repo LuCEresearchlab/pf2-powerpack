@@ -145,6 +145,8 @@
         "entity.other.attribute-name.localname.xml",
         "entity.other.attribute-name.xml",
         "support.type.property-name.json",
+        "variable.language.this.java",
+        "variable.language.java",
         "variable.other.assignment.shell",
         "variable.other.normal.shell",
         "variable.parameter.positional.shell"
